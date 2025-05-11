@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COVID-19 Visualization Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- D3.js -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <!-- TopoJSON -->
+    <script src="https://unpkg.com/topojson@3"></script>
+</head>
+
+<body>
+    <div class="">
+        <div class="dashboard-header">
+            <svg class="dashboard-header__icon" xmlns="http://www.w3.org/2000/svg" width="58" height="38"
+                viewBox="0 0 24 24" fill="#3a86ff">
+                <path
+                    d="M12 2a1 1 0 0 1 1 1v1.07a7.001 7.001 0 0 1 5.93 5.93H20a1 1 0 1 1 0 2h-1.07a7.001 7.001 0 0 1-5.93 5.93V20a1 1 0 1 1-2 0v-1.07a7.001 7.001 0 0 1-5.93-5.93H4a1 1 0 1 1 0-2h1.07a7.001 7.001 0 0 1 5.93-5.93V3a1 1 0 0 1 1-1zm0 4a5 5 0 1 0 0 10A5 5 0 0 0 12 6z" />
+            </svg>
+            <span class="dashboard-header__title">Interactive Dashboard: COVID-19 Cases & Recovery</span>
+        </div>
+    </div>
+    <div class="container">
+
+        <div class="charts-column">
+            <div class="chart-container">
+                <h2>Global COVID-19 Distribution</h2>
+                <div id="piechart"></div>
+            </div>
+
+            <div class="chart-container">
+                <h2>Heatmap</h2>
+                <div id="heatmap"></div>
+            </div>
+        </div>
+
+        <div class="control-buttons">
+            <button class="control-button active" data-type="total_cases">Total Cases</button>
+            <button class="control-button" data-type="total_deaths">Total Deaths</button>
+            <button class="control-button" data-type="total_recovered">Total Recovered</button>
+        </div>
+        <div class="chart-container">
+            <h2>World Map</h2>
+            <div id="worldmap"></div>
+        </div>
+
+        <div class="chart-container">
+            <h2>Trends</h2>
+            <div class="filter-controls" id="trends-filter">
+                <label for="trends-country-select">Select Country:</label>
+                <select id="trends-country-select" style="min-width:180px;"></select>
+            </div>
+            <div id="linechart"></div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,338 @@
+@import url('https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;700&display=swap');
+
+
+
+/* Reset and base styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f1f1f3 0%, #c0cad7 100%);
+    color: #22223b;
+    margin: 0;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 40px auto;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(44, 34, 59, 0.08);
+    padding: 32px 24px;
+}
+
+h1,
+h2 {
+    text-align: center;
+    color: #0643a5;
+    margin-bottom: 1.5rem;
+    letter-spacing: 1px;
+}
+
+h1 {
+    font-size: 2.5em;
+}
+
+h2 {
+    color: #8338ec;
+    margin-top: 2rem;
+    font-size: 1.8em;
+}
+
+/* Chart containers */
+.chart-container {
+    background: #f7faff;
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 32px;
+    box-shadow: 0 2px 8px rgba(58, 134, 255, 0.07);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: fadeIn 0.5s ease-in;
+}
+
+.chart {
+    width: 100%;
+    height: 500px;
+    margin-top: 20px;
+}
+
+/* Control buttons */
+.control-buttons {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    margin-bottom: 32px;
+}
+
+.control-button {
+    padding: 12px 28px;
+    border: none;
+    border-radius: 6px;
+    background: #e9ecef;
+    color: #495057;
+    font-size: 1.1em;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+    box-shadow: 0 2px 6px rgba(58, 134, 255, 0.08);
+}
+
+.control-button:hover {
+    background: #bde0fe;
+    color: #22223b;
+}
+
+.control-button.active {
+    background: #21bb59;
+    color: #fff;
+}
+
+/* Tooltip */
+.tooltip {
+    position: absolute;
+    padding: 12px 18px;
+    background: rgba(58, 134, 255, 0.95);
+    color: white;
+    border-radius: 6px;
+    font-size: 15px;
+    pointer-events: none;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(44, 34, 59, 0.12);
+}
+
+/* Filter controls */
+.filter-controls {
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+.filter-controls select {
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #bdbdbd;
+    background: #fff;
+    font-size: 1em;
+    min-width: 220px;
+    color: #22223b;
+}
+
+#trends-filter {
+    text-align: center;
+    margin-bottom: 18px;
+}
+
+#trends-country-select {
+    padding: 6px;
+    border-radius: 6px;
+    border: 1px solid #bdbdbd;
+    background: #fff;
+    color: #22223b;
+}
+
+/* Responsive design */
+@media (max-width: 900px) {
+    .container {
+        padding: 12px;
+    }
+
+    .chart-container {
+        padding: 10px;
+    }
+
+    .control-buttons {
+        flex-direction: column;
+        gap: 8px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    .chart {
+        height: 400px;
+    }
+
+    .control-buttons {
+        flex-wrap: wrap;
+    }
+
+    .control-button {
+        flex: 1 1 calc(50% - 5px);
+    }
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.5em;
+    }
+
+    h2 {
+        font-size: 1.1em;
+    }
+
+    .chart-container {
+        padding: 4px;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Chart specific styles */
+#worldmap path {
+    transition: fill 0.3s ease;
+}
+
+#heatmap rect {
+    transition: fill 0.3s ease;
+}
+
+#linechart line {
+    transition: stroke 0.3s ease;
+}
+
+#piechart path {
+    transition: filter 0.2s, transform 0.2s;
+    cursor: pointer;
+}
+
+#piechart path:hover {
+    filter: brightness(1.1) drop-shadow(0 2px 8px #3a86ff33);
+    transform: scale(1.04);
+}
+
+#worldmap,
+#heatmap,
+#linechart,
+#piechart {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+svg {
+    background: none;
+}
+
+.loading-message,
+.error-message {
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Pie chart container */
+#piechart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 400px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* Pie chart SVG */
+#piechart svg {
+    background: none;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Pie chart legend */
+.pie-legend {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin-top: 24px;
+    flex-wrap: wrap;
+}
+
+.pie-legend-item {
+    display: flex;
+    align-items: center;
+    font-size: 1em;
+    color: #495057;
+    background: #f7faff;
+    border-radius: 6px;
+    padding: 6px 14px;
+    margin: 2px 0;
+    box-shadow: 0 1px 4px rgba(58, 134, 255, 0.07);
+    transition: background 0.2s;
+}
+
+.pie-legend-color {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    margin-right: 10px;
+    border: 2px solid #fff;
+    box-shadow: 0 0 0 1px #bde0fe;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    #piechart {
+        min-height: 250px;
+    }
+
+    .pie-legend {
+        gap: 10px;
+        font-size: 0.95em;
+    }
+}
+
+.dashboard-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.2em;
+    font-weight: bold;
+    color: #598fe5;
+    margin-bottom: 32px;
+    letter-spacing: 1px;
+    gap: 10px;
+}
+
+.virus-icon {
+    flex-shrink: 0;
+}
+
+/* Header avec icône */
+.dashboard-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+    background-color: #f0f4f8;
+    border-bottom: 2px solid #e9e4e4;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    margin-bottom: 20px;
+    border-radius: 8px;
+    justify-content: center;
+}
+
+.dashboard-header__icon {
+    width: 40px;
+    height: 40px;
+}
+
+.dashboard-header__title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #5291e3e1;
+    font-family: 'Segoe UI', sans-serif;
+    letter-spacing: 1px;
+}
