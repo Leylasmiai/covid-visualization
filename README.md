@@ -27,11 +27,15 @@ Ce projet vise à fournir une visualisation claire, interactive et accessible de
 - Permettre une analyse comparative entre différents pays.
 - Faciliter la compréhension des tendances grâce à des graphiques et cartes intuitifs.
 
----
+
+
 
 ## 📷 Aperçu
+---![Capture d'écran 2025-05-29 041142](https://github.com/user-attachments/assets/017025ea-5078-4d25-8c3c-13880a28e979)
+![Capture d'écran 2025-05-29 041106](https://github.com/user-attachments/assets/16a49471-af79-410e-ad55-40378b5a9018)
+![Capture d'écran 2025-05-29 041116](https://github.com/user-attachments/assets/0d2b7d9e-30c8-4a89-a0cd-228ed07fb252)
+![Capture d'écran 2025-05-29 041132](https://github.com/user-attachments/assets/fd75fb8d-8a1f-4f55-8450-14c15f345ab6)
 
-> *(Insérez ici des captures d’écran du tableau de bord si vous le souhaitez)*
 
 - Carte interactive des cas par pays.
 - Graphique d’évolution des cas confirmés.
