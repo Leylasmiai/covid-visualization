@@ -65,13 +65,8 @@ Ce projet vise à fournir une visualisation claire, interactive et accessible de
 ---
 
 ## 📁 Structure du projet
+![Capture d'écran 2025-05-29 041345](https://github.com/user-attachments/assets/2823b864-b371-49f5-a52b-6af8e0f5ed18)
 
-covid-visualization/
-├── index.html # Page principale
-├── style.css # Fichier de styles
-├── scripts/ # Scripts JavaScript (D3, interactivité)
-├── data/ # Données CSV utilisées
-└── README.md # Documentation du projet
 
 
 
