@@ -1,82 +1,104 @@
-🌍 COVID-19 Visualization Dashboard
-Une plateforme interactive de visualisation des données mondiales liées à la pandémie de COVID-19, permettant d'explorer les tendances des cas, des décès et des guérisons par pays et au fil du temps.
-GitHub
-+1
-GitHub
-+1
+# 🌍 COVID-19 Visualization Dashboard
 
-🔗 Accéder au tableau de bord en ligne
+Une plateforme interactive pour explorer l’évolution mondiale de la pandémie de COVID-19 à travers des visualisations dynamiques et informatives.
 
-📊 Aperçu du projet
-Ce projet vise à fournir une visualisation claire et interactive de l'évolution de la pandémie de COVID-19 à l'échelle mondiale. Il permet aux utilisateurs de :
+🔗 [Voir le projet en ligne](https://leylasmiai.github.io/covid-visualization/)
 
-Suivre les tendances des cas confirmés, des décès et des guérisons.
+---
 
-Explorer les données par pays à l'aide d'une carte interactive.
+## 📌 Sommaire
 
-Analyser les données temporelles pour comprendre l'évolution de la pandémie.
+- [🎯 Objectif](#-objectif)
+- [📷 Aperçu](#-aperçu)
+- [⚙️ Fonctionnalités](#-fonctionnalités)
+- [🧰 Technologies utilisées](#-technologies-utilisées)
+- [📁 Structure du projet](#-structure-du-projet)
+- [📊 Sources de données](#-sources-de-données)
+- [🚀 Lancement du projet](#-lancement-du-projet)
+- [📬 Contact](#-contact)
 
-🛠️ Technologies utilisées
-HTML5 & CSS3 : Structure et mise en page du site.
+---
 
-JavaScript (D3.js, Chart.js) : Manipulation des données et création de visualisations interactives.
+## 🎯 Objectif
 
-GitHub Pages : Hébergement du tableau de bord.
-GitHub
-+1
-GitHub
-+1
-GitHub
-+2
-GitHub
-+2
-GitHub
-+2
+Ce projet vise à fournir une visualisation claire, interactive et accessible des données COVID-19 à l’échelle mondiale, avec pour objectifs :
 
-📁 Structure du projet
-index.html : Page principale du tableau de bord.
+- Suivre l’évolution des cas confirmés, des décès et des guérisons.
+- Permettre une analyse comparative entre différents pays.
+- Faciliter la compréhension des tendances grâce à des graphiques et cartes intuitifs.
 
-style.css : Feuille de style pour la mise en page et le design.
+---
 
-scripts/ : Contient les scripts JavaScript pour la manipulation des données et les visualisations.
+## 📷 Aperçu
 
-data/ : Fichiers de données CSV utilisés pour alimenter les visualisations.
-GitHub
-+6
-GitHub
-+6
-GitHub
-+6
+> *(Insérez ici des captures d’écran du tableau de bord si vous le souhaitez)*
 
-📈 Fonctionnalités principales
-Carte interactive : Visualisation des cas par pays avec des codes couleur représentant l'intensité des cas.
+- Carte interactive des cas par pays.
+- Graphique d’évolution des cas confirmés.
+- Filtres dynamiques pour analyse par pays.
 
-Graphiques temporels : Suivi des tendances quotidiennes des cas, décès et guérisons.
+---
 
-Filtres dynamiques : Possibilité de sélectionner un pays spécifique pour une analyse détaillée.
-GitHub
-+1
-GitHub
-+1
-GitHub
-+2
-GitHub
-+2
-GitHub
-+2
+## ⚙️ Fonctionnalités
 
-🔍 Données sources
-Les données utilisées dans ce projet proviennent de sources fiables et sont régulièrement mises à jour pour refléter l'évolution de la pandémie.
+- 🌐 **Carte mondiale interactive** des cas COVID-19.
+- 📈 **Graphiques temporels** (cas, décès, guérisons).
+- 🎚 **Filtres dynamiques** par pays.
+- 💻 **Interface responsive** (mobile, tablette, desktop).
 
-🚀 Déploiement
-Le tableau de bord est déployé et accessible en ligne via GitHub Pages :
+---
+
+## 🧰 Technologies utilisées
+
+| Technologie     | Rôle                                 |
+|----------------|--------------------------------------|
+| HTML5 / CSS3    | Structure & mise en page             |
+| JavaScript      | Logique & interactivité              |
+| D3.js           | Visualisation de données (carte, graphes) |
+| Chart.js        | Graphiques statistiques              |
+| GitHub Pages    | Hébergement du site web              |
+
+---
+
+## 📁 Structure du projet
+
+covid-visualization/
+├── index.html # Page principale
+├── style.css # Fichier de styles
+├── scripts/ # Scripts JavaScript (D3, interactivité)
+├── data/ # Données CSV utilisées
+└── README.md # Documentation du projet
+
+
+
+---
+
+## 📊 Sources de données
+
+Les données utilisées sont issues de sources fiables :
+
+- [Johns Hopkins University CSSE](https://github.com/CSSEGISandData/COVID-19)
+- [Our World in Data](https://ourworldindata.org/coronavirus)
+
+---
+
+## 🚀 Lancement du projet
+
+### En local :
+
+1. Cloner le dépôt :
+
+   ```bash
+   git clone https://github.com/leylasmiai/covid-visualization.git
+   cd covid-visualization
+
+Ouvrir le fichier index.html dans un navigateur.
+
+En ligne :
+Disponible via GitHub Pages :
 🔗 https://leylasmiai.github.io/covid-visualization/
 
 📬 Contact
-Pour toute question ou suggestion concernant ce projet, veuillez contacter :
-
-Nom : Leyla Smiai
-
-Email : ssmiai93@gmail.com
-
-GitHub : leylasmiai
+Leyla Smiai
+📧 Email : ssmiai93@gmail.com
+🌐 GitHub : @leylasmiai
